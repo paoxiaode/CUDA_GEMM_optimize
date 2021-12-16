@@ -1,5 +1,5 @@
 #include <sys/time.h>
-
+// #include "GEMM.h"
 #ifndef _COMMON_H
 #define _COMMON_H
 
@@ -71,16 +71,4 @@ inline double seconds()
     int i = gettimeofday(&tp, &tzp);
     return ((double)tp.tv_sec + (double)tp.tv_usec * 1.e-6);
 }
-
-// inline void dispMat(float* A, const int nx, const int ny){
-//         for(int i = 0; i < nx; ++i){
-//         for(int j = 0; j < ny; ++j){
-//             printf("%f ", A[i*nx + j]);
-//         }
-//         printf("\n");
-//     }
-//     printf("\n");
-
-// }
-
 #endif // _COMMON_H

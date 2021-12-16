@@ -20,7 +20,7 @@ def main():
     mat_size = []
     res = []
     t = []
-    lengend = ["mulMat_naive", "mulMat_1x4", "mulMat_4x4", "mulMat_Tiling", "mulMat_Tiling_Coalesing", "mulMat_Tiling_noBankflict"]
+    lengend = ["mulMat_naive", "mulMat_1x4", "mulMat_4x4", "mulMat_Tiling", "mulMat_Tiling_Coalesing", "mulMat_Tiling_noBankflict", "mulMat_outProd"]
     with open(file_name,'r') as f:
         for line in f.readlines():
             if line[0] == "r":
@@ -32,7 +32,7 @@ def main():
     res.append(t)
     fig = plt.figure(dpi=200,figsize=[8,6])
     for j in range(len(res[0])):
-        plt.plot(mat_size,[gflops(mat_size[i],res[i][j]) for i in range(len(res))],linewidth=2,marker='o',markersize=6)
+        plt.plot(mat_size,[gflops(mat_size[i],res[i][j]) for i in range(len(res))],marker='o')
     plt.legend(lengend, fontsize = 6)
     plt.xticks(mat_size,rotation = 30, fontsize = 6)
     plt.xlabel("Matrix size")

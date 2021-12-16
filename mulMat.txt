@@ -1,120 +1,137 @@
 this is result of GEMM
 result 384
-mulMat on device orgin: 	0.000755
-mulMat on device 1*4: 	0.000385
-mulMat on device 4*4: 	0.000713
-mulMat on device tiling: 	0.000443
-mulMat on device tiling coalesing: 	0.000464
-mulMat on device tiling noBankflict: 	0.000451
+mulMat on device orgin: 	0.000261
+mulMat on device 1*4: 	0.000649
+mulMat on device 4*4: 	0.001022
+mulMat on device tiling: 	0.000987
+mulMat on device tiling coalesing: 	0.000727
+mulMat on device tiling noBankflict: 	0.000644
+mulMat on device outter product: 	0.000688
 result 512
-mulMat on device orgin: 	0.000455
-mulMat on device 1*4: 	0.000450
-mulMat on device 4*4: 	0.000726
-mulMat on device tiling: 	0.000568
-mulMat on device tiling coalesing: 	0.000697
-mulMat on device tiling noBankflict: 	0.000548
+mulMat on device orgin: 	0.000384
+mulMat on device 1*4: 	0.000707
+mulMat on device 4*4: 	0.001293
+mulMat on device tiling: 	0.000901
+mulMat on device tiling coalesing: 	0.000989
+mulMat on device tiling noBankflict: 	0.000799
+mulMat on device outter product: 	0.000326
 result 640
-mulMat on device orgin: 	0.000827
-mulMat on device 1*4: 	0.000596
-mulMat on device 4*4: 	0.000864
-mulMat on device tiling: 	0.000840
-mulMat on device tiling coalesing: 	0.000972
-mulMat on device tiling noBankflict: 	0.000737
+mulMat on device orgin: 	0.000662
+mulMat on device 1*4: 	0.000833
+mulMat on device 4*4: 	0.001564
+mulMat on device tiling: 	0.001000
+mulMat on device tiling coalesing: 	0.001193
+mulMat on device tiling noBankflict: 	0.000930
+mulMat on device outter product: 	0.000486
 result 768
-mulMat on device orgin: 	0.001054
-mulMat on device 1*4: 	0.000775
-mulMat on device 4*4: 	0.001235
-mulMat on device tiling: 	0.001125
-mulMat on device tiling coalesing: 	0.001254
-mulMat on device tiling noBankflict: 	0.001145
+mulMat on device orgin: 	0.000927
+mulMat on device 1*4: 	0.001437
+mulMat on device 4*4: 	0.002033
+mulMat on device tiling: 	0.001843
+mulMat on device tiling coalesing: 	0.001879
+mulMat on device tiling noBankflict: 	0.001675
+mulMat on device outter product: 	0.000829
 result 896
-mulMat on device orgin: 	0.001535
-mulMat on device 1*4: 	0.001154
-mulMat on device 4*4: 	0.001464
-mulMat on device tiling: 	0.001595
-mulMat on device tiling coalesing: 	0.001772
-mulMat on device tiling noBankflict: 	0.001481
+mulMat on device orgin: 	0.001262
+mulMat on device 1*4: 	0.001661
+mulMat on device 4*4: 	0.002594
+mulMat on device tiling: 	0.002491
+mulMat on device tiling coalesing: 	0.002499
+mulMat on device tiling noBankflict: 	0.002077
+mulMat on device outter product: 	0.001097
 result 1024
-mulMat on device orgin: 	0.001722
-mulMat on device 1*4: 	0.001289
-mulMat on device 4*4: 	0.002538
-mulMat on device tiling: 	0.001870
-mulMat on device tiling coalesing: 	0.002380
-mulMat on device tiling noBankflict: 	0.001943
+mulMat on device orgin: 	0.001873
+mulMat on device 1*4: 	0.001964
+mulMat on device 4*4: 	0.004273
+mulMat on device tiling: 	0.002935
+mulMat on device tiling coalesing: 	0.003748
+mulMat on device tiling noBankflict: 	0.002702
+mulMat on device outter product: 	0.001239
 result 1152
-mulMat on device orgin: 	0.001932
-mulMat on device 1*4: 	0.001688
-mulMat on device 4*4: 	0.002964
-mulMat on device tiling: 	0.002876
-mulMat on device tiling coalesing: 	0.003215
-mulMat on device tiling noBankflict: 	0.002579
+mulMat on device orgin: 	0.002263
+mulMat on device 1*4: 	0.002718
+mulMat on device 4*4: 	0.005255
+mulMat on device tiling: 	0.004043
+mulMat on device tiling coalesing: 	0.005126
+mulMat on device tiling noBankflict: 	0.003361
+mulMat on device outter product: 	0.001481
 result 1408
-mulMat on device orgin: 	0.003267
-mulMat on device 1*4: 	0.002617
-mulMat on device 4*4: 	0.005020
-mulMat on device tiling: 	0.003970
-mulMat on device tiling coalesing: 	0.004558
-mulMat on device tiling noBankflict: 	0.002912
+mulMat on device orgin: 	0.003995
+mulMat on device 1*4: 	0.004130
+mulMat on device 4*4: 	0.008680
+mulMat on device tiling: 	0.005505
+mulMat on device tiling coalesing: 	0.007236
+mulMat on device tiling noBankflict: 	0.004790
+mulMat on device outter product: 	0.002133
 result 1664
-mulMat on device orgin: 	0.004263
-mulMat on device 1*4: 	0.003512
-mulMat on device 4*4: 	0.007591
-mulMat on device tiling: 	0.004973
-mulMat on device tiling coalesing: 	0.006020
-mulMat on device tiling noBankflict: 	0.005333
+mulMat on device orgin: 	0.006251
+mulMat on device 1*4: 	0.008647
+mulMat on device 4*4: 	0.013313
+mulMat on device tiling: 	0.008541
+mulMat on device tiling coalesing: 	0.011086
+mulMat on device tiling noBankflict: 	0.006841
+mulMat on device outter product: 	0.002773
 result 1920
-mulMat on device orgin: 	0.006645
-mulMat on device 1*4: 	0.005319
-mulMat on device 4*4: 	0.010070
-mulMat on device tiling: 	0.008465
-mulMat on device tiling coalesing: 	0.009995
-mulMat on device tiling noBankflict: 	0.007367
+mulMat on device orgin: 	0.009520
+mulMat on device 1*4: 	0.009736
+mulMat on device 4*4: 	0.018055
+mulMat on device tiling: 	0.013164
+mulMat on device tiling coalesing: 	0.017352
+mulMat on device tiling noBankflict: 	0.010482
+mulMat on device outter product: 	0.003712
 result 2176
-mulMat on device orgin: 	0.008654
-mulMat on device 1*4: 	0.007088
-mulMat on device 4*4: 	0.016017
-mulMat on device tiling: 	0.010846
-mulMat on device tiling coalesing: 	0.014153
-mulMat on device tiling noBankflict: 	0.008734
+mulMat on device orgin: 	0.012696
+mulMat on device 1*4: 	0.012554
+mulMat on device 4*4: 	0.026003
+mulMat on device tiling: 	0.017062
+mulMat on device tiling coalesing: 	0.023700
+mulMat on device tiling noBankflict: 	0.013462
+mulMat on device outter product: 	0.004911
 result 2432
-mulMat on device orgin: 	0.015119
-mulMat on device 1*4: 	0.009967
-mulMat on device 4*4: 	0.032499
-mulMat on device tiling: 	0.012713
-mulMat on device tiling coalesing: 	0.019244
-mulMat on device tiling noBankflict: 	0.009532
+mulMat on device orgin: 	0.021290
+mulMat on device 1*4: 	0.016487
+mulMat on device 4*4: 	0.047611
+mulMat on device tiling: 	0.017890
+mulMat on device tiling coalesing: 	0.026472
+mulMat on device tiling noBankflict: 	0.013978
+mulMat on device outter product: 	0.005786
 result 2816
-mulMat on device orgin: 	0.024652
-mulMat on device 1*4: 	0.015099
-mulMat on device 4*4: 	0.053080
-mulMat on device tiling: 	0.019162
-mulMat on device tiling coalesing: 	0.028805
-mulMat on device tiling noBankflict: 	0.013310
+mulMat on device orgin: 	0.029415
+mulMat on device 1*4: 	0.020443
+mulMat on device 4*4: 	0.066198
+mulMat on device tiling: 	0.023779
+mulMat on device tiling coalesing: 	0.035581
+mulMat on device tiling noBankflict: 	0.017823
+mulMat on device outter product: 	0.006966
 result 3200
-mulMat on device orgin: 	0.037538
-mulMat on device 1*4: 	0.022274
-mulMat on device 4*4: 	0.081269
-mulMat on device tiling: 	0.028826
-mulMat on device tiling coalesing: 	0.042506
-mulMat on device tiling noBankflict: 	0.020095
+mulMat on device orgin: 	0.039799
+mulMat on device 1*4: 	0.022926
+mulMat on device 4*4: 	0.085050
+mulMat on device tiling: 	0.030706
+mulMat on device tiling coalesing: 	0.044180
+mulMat on device tiling noBankflict: 	0.023202
+mulMat on device outter product: 	0.008450
 result 3584
-mulMat on device orgin: 	0.051290
-mulMat on device 1*4: 	0.030323
-mulMat on device 4*4: 	0.121370
-mulMat on device tiling: 	0.039888
-mulMat on device tiling coalesing: 	0.059690
-mulMat on device tiling noBankflict: 	0.027509
+mulMat on device orgin: 	0.049942
+mulMat on device 1*4: 	0.031505
+mulMat on device 4*4: 	0.123152
+mulMat on device tiling: 	0.040881
+mulMat on device tiling coalesing: 	0.061374
+mulMat on device tiling noBankflict: 	0.029573
+mulMat on device outter product: 	0.011296
 result 3968
-mulMat on device orgin: 	0.070180
-mulMat on device 1*4: 	0.041892
-mulMat on device 4*4: 	0.166765
-mulMat on device tiling: 	0.054279
-mulMat on device tiling coalesing: 	0.081187
-mulMat on device tiling noBankflict: 	0.038995
+mulMat on device orgin: 	0.067480
+mulMat on device 1*4: 	0.042847
+mulMat on device 4*4: 	0.168477
+mulMat on device tiling: 	0.056652
+mulMat on device tiling coalesing: 	0.083534
+mulMat on device tiling noBankflict: 	0.041165
+mulMat on device outter product: 	0.013905
 result 4096
-mulMat on device orgin: 	0.077116
-mulMat on device 1*4: 	0.045126
-mulMat on device 4*4: 	0.183920
-mulMat on device tiling: 	0.061642
-mulMat on device tiling coalesing: 	0.088653
-mulMat on device tiling noBankflict: 	0.042838
+mulMat on device orgin: 	0.073689
+mulMat on device 1*4: 	0.046548
+mulMat on device 4*4: 	0.185778
+mulMat on device tiling: 	0.061624
+mulMat on device tiling coalesing: 	0.090628
+mulMat on device tiling noBankflict: 	0.045793
+mulMat on device outter product: 	0.015878
