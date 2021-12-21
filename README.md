@@ -1,7 +1,8 @@
 # CUDA_GEMM_optimize
 Author: Jiahui Liu
 
+Platform： GA100
 
 
 Compare GFLOPS between these kernels
-![这是图片](/result.png "Magic Gardens")
+![不同kernel性能对比](data/result.png "Magic Gardens")
