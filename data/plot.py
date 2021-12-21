@@ -10,7 +10,7 @@ def main():
     mat_size = []
     res = []
     t = []
-    lengend = ["mulMat_cublas", "mulMat_naive", "mulMat_1x4", "mulMat_4x4", "mulMat_Tiling", "mulMat_Tiling_Coalesing", "mulMat_Tiling_noBankflict", "mulMat_outProd"]
+    lengend = ["mulMat_cublas", "mulMat_naive", "mulMat_1x4", "mulMat_4x4", "mulMat_Tiling", "mulMat_Tiling_Coalesing", "mulMat_Tiling_noBankflict", "mulMat_outProd", "mulMat_128x256x8"]
     with open(file_name,'r') as f:
         for line in f.readlines():
             if line[0] == "r":

@@ -1,7 +1,8 @@
 #include "include/common.h"
+#include "include/kernel_ampere.cuh"
+
 #include "include/GEMM.cuh"
 #include "include/utils.cuh"
-
 
 #include <cuda_runtime.h>
 #include <stdio.h>

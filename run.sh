@@ -1,8 +1,8 @@
 #!/bin/bash
 flie_name="data/mulMat.txt"
 echo this is result of GEMM > $flie_name
-tmp=(384 512 640 768 896 1024 1152 1408 1664 1920 2176 2432 2816 3200 3584 3968 4096)
-for i in ${tmp[@]}
+tmp=(256 1024  1408 1664 1920 2560 2816 3200 3584 4096 4864 5632) 
+for ((i=512; i<=5632; i+=512))
 do
 echo result $i
 echo result $i >> $flie_name

@@ -1,13 +1,10 @@
-#include "common.h"
-#include "GEMM.cuh"
-
 #include <cuda_runtime.h>
 #include <stdio.h>
 #include <cublas_v2.h>
 
 #define TILE_SIZE 16
 #define VECTOR_SIZE 4
-#define KERNEL_NUM 8
+#define KERNEL_NUM 9
 
 void test_cublas(Mat* A, Mat* B, Mat* C){
     CHECK(cudaDeviceSynchronize());
@@ -49,6 +46,14 @@ void test_mulMat_outerproduct(Mat* A, Mat* B, Mat* C, dim3 block, dim3 grid){
     dim3 grid1((C->width + block.x - 1)/(TILE_SIZE*VECTOR_SIZE), (C->height + block.y - 1)/TILE_SIZE);
     MatMulKernel_Tiling_outProd<<<grid1, block1>>>(A, B, C);
 }
+void test_mulMat_128x256x8(Mat* A, Mat* B, Mat* C){
+    CHECK(cudaDeviceSynchronize());
+    dim3 grid((C->width + 255) / 256, (C->height + 127) / 128);
+    sgemm_128x256x8_kernel<<<grid, 256>>>(
+        A->elements, B->elements, C->elements, A->height, B->width, B->height,
+        B->height * sizeof(float) * 32,
+        A->height * sizeof(float) * 8);
+}
 
 void test_kernel(int kernel_num, Mat* A, Mat* B, Mat* C, dim3 block, dim3 grid){
     CHECK(cudaDeviceSynchronize());
@@ -61,7 +66,8 @@ void test_kernel(int kernel_num, Mat* A, Mat* B, Mat* C, dim3 block, dim3 grid){
     case 4: test_mulMat_Tiling(A, B, C, block, grid); break;
     case 5: test_mulMat_Tiling_Coalesing(A, B, C, block, grid); break;
     case 6: test_mulMat_Tiling_noBankconflict(A, B, C, block, grid); break;
-    case 7: test_mulMat_outerproduct(A, B, C, block, grid); break;
+    case 7: test_mulMat_outerproduct(A, B, C, block, grid); break; 
+    case 8: test_mulMat_128x256x8(A, B, C); break;
     default:
         break;
     }
