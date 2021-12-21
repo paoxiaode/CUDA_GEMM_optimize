@@ -1,4 +1,6 @@
-#include "GEMM.h"
+#include "GEMM.cuh"
+#include <stdio.h>
+#include <cuda_runtime.h>
 
 void initdata(float* A, const int size)
 {
@@ -7,10 +9,10 @@ void initdata(float* A, const int size)
     }
     return;
 }
-void cleardata(float* A, const int size)
+void cleardata(Mat* A)
 {
-    for(int i = 0; i < size; ++i){
-        A[i] = (float)(0);
+    for(int i = 0; i < A->height * A->width; ++i){
+        A->elements[i] = (float)(0);
     }
     return;
 }
@@ -25,25 +27,34 @@ void dispMat(Mat* A){
     printf("\n");
 }
 
-void checkResult(Mat* hostRef, Mat *gpuRef)
+bool checkResult(Mat* hostRef, Mat *gpuRef, int order_type)
 {
     double epsilon = 1.0E-3;
-    bool match = 1;
-
-    for (int i = 0; i < hostRef->width * hostRef->height; i++)
+    if (order_type == C_ORDER)
     {
-        if (abs(hostRef->elements[i] - gpuRef->elements[i]) > epsilon)
+         for (int i = 0; i < hostRef->width * hostRef->height; i++)
         {
-            match = 0;
+            if (abs(hostRef->elements[i] - gpuRef->elements[i]) > epsilon)
+            {
             printf("host %f gpu %f\n", hostRef->elements[i], gpuRef->elements[i]);
-            break;
+            printf("Arrays not match!!!!.\n\n");
+            return false;
+            }
         }
     }
-
-    if (!match)
-    {
-        printf("Arrays not match!!!!.\n\n");
+    else{
+        for(int i = 0; i < hostRef-> width; ++i){
+            for(int j = 0; j < hostRef-> height; ++j){
+                if (abs(hostRef->elements[i*hostRef->height + j] - gpuRef->elements[j*gpuRef->height + i]) > epsilon)
+                {
+                printf("host %f gpu %f\n", hostRef->elements[i*hostRef->height + j], gpuRef->elements[j*gpuRef->height + i]);
+                printf("Arrays not match!!!!.\n\n");
+                return false;
+            }
+        }
+        }
     }
+    return true;
 }
 
 void MatMulHost(Mat* A, Mat* B, Mat* C)
@@ -186,12 +197,64 @@ __global__ void MatMulKernel_Tiling_outProd(Mat *A, Mat *B, Mat *C) {
             __syncthreads();
         }
         
+    // Store each value of Csub back to C in global memory.
+    int c = C->width * TILE_SIZE * by + TILE_SIZE * VECTOR_SIZE * bx;
+    c += TILE_SIZE * ty + tx;
+    for (int i = 0; i < TILE_SIZE; ++i) {
+        C->elements[c] = cv[i];
+        c += C->width;
+    }
+}
+
+__global__ void MatMulKernel_Tiling_outProd_novector(Mat *A, Mat *B, Mat *C) {
+	/* Basic tiling implementation of matrix multiplication.
+	 * Based on a more mathematically reasonable indexing method.
+	 */
+	int bx = blockIdx.x, by = blockIdx.y;
+	int tx = threadIdx.x, ty = threadIdx.y;
+
+	__shared__ float As[TILE_SIZE * TILE_SIZE];
+    float cv[TILE_SIZE] = {0};
+
+	int aBegin = A->width * TILE_SIZE * by;
+	int aEnd = aBegin + A->width - 1;
+	int aStep = TILE_SIZE;
+
+	int bBegin = TILE_SIZE * VECTOR_SIZE * bx;
+	int bStep = TILE_SIZE * B->width;
+
+
+    for (int a = aBegin, b = bBegin; a <= aEnd; a += aStep, b += bStep) {
+            // Load Asub with size of TILE*TILE in colomn-major style.
+            // Each thread needs to load TILE_SIZE / VECTOR_SIZE values of A.
+            int t = VECTOR_SIZE;
+            for (int i = 0; i < TILE_SIZE / VECTOR_SIZE; ++i) {
+                As[ (i*t+ty) + TILE_SIZE * tx] = A->elements[a + A->width*(i*t+ty) + tx];
+            }
+            __syncthreads();
+
+            float *ap = As;	// Point to the first address of As, increase later.
+            // TODO: global memory ? register ? not clear :(
+            float *bp = &B->elements[b + TILE_SIZE * ty + tx];	
+
+            for (int i = 0; i < TILE_SIZE; ++i) {
+                float bv = *bp;	
+            // Each thread calculate a vector of C with size of TILE_SIZE.
+                for (int j = 0; j < TILE_SIZE; ++j) {
+                    cv[j] += ap[j] * bv;
+                }
+                ap += TILE_SIZE;
+                bp += B->width;
+            }
+            __syncthreads();
+        }
+        
         // Store each value of Csub back to C in global memory.
-        int c = B->width * TILE_SIZE * by + TILE_SIZE * VECTOR_SIZE * bx;
+        int c = C->width * TILE_SIZE * by + TILE_SIZE * VECTOR_SIZE * bx;
         c += TILE_SIZE * ty + tx;
         for (int i = 0; i < TILE_SIZE; ++i) {
             C->elements[c] = cv[i];
-            c += B->width;
+            c += C->width;
         }
 }
 

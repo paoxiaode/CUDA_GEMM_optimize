@@ -1,0 +1,154 @@
+this is result of GEMM
+result 384
+Average elasped time: 0.000517 second, performance: 219.167664 GFLOPS.
+Average elasped time: 0.000156 second, performance: 728.057895 GFLOPS.
+Average elasped time: 0.000184 second, performance: 616.798653 GFLOPS.
+Average elasped time: 0.000677 second, performance: 167.310133 GFLOPS.
+Average elasped time: 0.000162 second, performance: 697.741347 GFLOPS.
+Average elasped time: 0.000207 second, performance: 546.943623 GFLOPS.
+Average elasped time: 0.000134 second, performance: 842.284854 GFLOPS.
+Average elasped time: 0.000454 second, performance: 249.643341 GFLOPS.
+result 512
+Average elasped time: 0.000574 second, performance: 467.696675 GFLOPS.
+Average elasped time: 0.000267 second, performance: 1003.998419 GFLOPS.
+Average elasped time: 0.000225 second, performance: 1194.822248 GFLOPS.
+Average elasped time: 0.000871 second, performance: 308.114746 GFLOPS.
+Average elasped time: 0.000260 second, performance: 1031.656845 GFLOPS.
+Average elasped time: 0.000359 second, performance: 747.487887 GFLOPS.
+Average elasped time: 0.000190 second, performance: 1410.893506 GFLOPS.
+Average elasped time: 0.000423 second, performance: 634.117088 GFLOPS.
+result 640
+Average elasped time: 0.000556 second, performance: 943.604880 GFLOPS.
+Average elasped time: 0.000468 second, performance: 1121.086075 GFLOPS.
+Average elasped time: 0.000417 second, performance: 1256.750227 GFLOPS.
+Average elasped time: 0.001126 second, performance: 465.454542 GFLOPS.
+Average elasped time: 0.000462 second, performance: 1135.758633 GFLOPS.
+Average elasped time: 0.000645 second, performance: 812.569465 GFLOPS.
+Average elasped time: 0.000316 second, performance: 1656.957895 GFLOPS.
+Average elasped time: 0.000463 second, performance: 1131.491625 GFLOPS.
+result 768
+Average elasped time: 0.000335 second, performance: 2701.484030 GFLOPS.
+Average elasped time: 0.000672 second, performance: 1349.094190 GFLOPS.
+Average elasped time: 0.000671 second, performance: 1349.711712 GFLOPS.
+Average elasped time: 0.001408 second, performance: 643.537963 GFLOPS.
+Average elasped time: 0.000733 second, performance: 1236.701175 GFLOPS.
+Average elasped time: 0.001063 second, performance: 852.675453 GFLOPS.
+Average elasped time: 0.000534 second, performance: 1697.823862 GFLOPS.
+Average elasped time: 0.000506 second, performance: 1790.601077 GFLOPS.
+result 896
+Average elasped time: 0.000389 second, performance: 3700.099991 GFLOPS.
+Average elasped time: 0.001013 second, performance: 1420.697678 GFLOPS.
+Average elasped time: 0.000939 second, performance: 1532.425769 GFLOPS.
+Average elasped time: 0.001869 second, performance: 769.697026 GFLOPS.
+Average elasped time: 0.001110 second, performance: 1295.939550 GFLOPS.
+Average elasped time: 0.001659 second, performance: 867.400128 GFLOPS.
+Average elasped time: 0.000801 second, performance: 1795.435037 GFLOPS.
+Average elasped time: 0.000557 second, performance: 2581.164924 GFLOPS.
+result 1024
+Average elasped time: 0.000439 second, performance: 4894.170699 GFLOPS.
+Average elasped time: 0.001327 second, performance: 1618.672390 GFLOPS.
+Average elasped time: 0.001421 second, performance: 1511.460885 GFLOPS.
+Average elasped time: 0.003286 second, performance: 653.521972 GFLOPS.
+Average elasped time: 0.001543 second, performance: 1391.699492 GFLOPS.
+Average elasped time: 0.001869 second, performance: 1149.250339 GFLOPS.
+Average elasped time: 0.000877 second, performance: 2449.371787 GFLOPS.
+Average elasped time: 0.000589 second, performance: 3643.419000 GFLOPS.
+result 1152
+Average elasped time: 0.000450 second, performance: 6794.047225 GFLOPS.
+Average elasped time: 0.001525 second, performance: 2005.362005 GFLOPS.
+Average elasped time: 0.001444 second, performance: 2116.818378 GFLOPS.
+Average elasped time: 0.003155 second, performance: 969.160698 GFLOPS.
+Average elasped time: 0.001715 second, performance: 1782.464066 GFLOPS.
+Average elasped time: 0.002518 second, performance: 1214.209587 GFLOPS.
+Average elasped time: 0.001173 second, performance: 2606.935607 GFLOPS.
+Average elasped time: 0.000611 second, performance: 5007.519580 GFLOPS.
+result 1408
+Average elasped time: 0.000626 second, performance: 8918.330868 GFLOPS.
+Average elasped time: 0.002600 second, performance: 2147.044835 GFLOPS.
+Average elasped time: 0.002415 second, performance: 2311.347844 GFLOPS.
+Average elasped time: 0.005432 second, performance: 1027.764321 GFLOPS.
+Average elasped time: 0.002997 second, performance: 1862.581445 GFLOPS.
+Average elasped time: 0.003607 second, performance: 1547.612915 GFLOPS.
+Average elasped time: 0.001713 second, performance: 3259.461825 GFLOPS.
+Average elasped time: 0.000731 second, performance: 7637.680022 GFLOPS.
+result 1664
+Average elasped time: 0.000767 second, performance: 12008.156060 GFLOPS.
+Average elasped time: 0.003374 second, performance: 2731.495416 GFLOPS.
+Average elasped time: 0.003169 second, performance: 2907.376575 GFLOPS.
+Average elasped time: 0.006823 second, performance: 1350.599893 GFLOPS.
+Average elasped time: 0.003884 second, performance: 2372.692663 GFLOPS.
+Average elasped time: 0.005775 second, performance: 1595.551768 GFLOPS.
+Average elasped time: 0.002661 second, performance: 3462.851507 GFLOPS.
+Average elasped time: 0.001049 second, performance: 8785.425835 GFLOPS.
+result 1920
+Average elasped time: 0.001057 second, performance: 13387.565450 GFLOPS.
+Average elasped time: 0.005276 second, performance: 2683.073654 GFLOPS.
+Average elasped time: 0.004847 second, performance: 2920.583941 GFLOPS.
+Average elasped time: 0.009802 second, performance: 1444.136831 GFLOPS.
+Average elasped time: 0.005970 second, performance: 2371.346302 GFLOPS.
+Average elasped time: 0.008831 second, performance: 1602.931317 GFLOPS.
+Average elasped time: 0.004056 second, performance: 3490.292204 GFLOPS.
+Average elasped time: 0.001512 second, performance: 9360.146385 GFLOPS.
+result 2176
+Average elasped time: 0.001429 second, performance: 14416.253137 GFLOPS.
+Average elasped time: 0.007600 second, performance: 2711.387567 GFLOPS.
+Average elasped time: 0.006796 second, performance: 3032.359687 GFLOPS.
+Average elasped time: 0.015516 second, performance: 1328.048133 GFLOPS.
+Average elasped time: 0.008451 second, performance: 2438.432139 GFLOPS.
+Average elasped time: 0.012677 second, performance: 1625.470283 GFLOPS.
+Average elasped time: 0.005722 second, performance: 3601.032174 GFLOPS.
+Average elasped time: 0.002087 second, performance: 9872.275864 GFLOPS.
+result 2432
+Average elasped time: 0.001957 second, performance: 14698.369259 GFLOPS.
+Average elasped time: 0.014190 second, performance: 2027.339542 GFLOPS.
+Average elasped time: 0.009299 second, performance: 3093.695167 GFLOPS.
+Average elasped time: 0.031742 second, performance: 906.340330 GFLOPS.
+Average elasped time: 0.011468 second, performance: 2508.702997 GFLOPS.
+Average elasped time: 0.017650 second, performance: 1629.921279 GFLOPS.
+Average elasped time: 0.007712 second, performance: 3730.360461 GFLOPS.
+Average elasped time: 0.002775 second, performance: 10366.577876 GFLOPS.
+result 2816
+Average elasped time: 0.002669 second, performance: 16734.146999 GFLOPS.
+Average elasped time: 0.021945 second, performance: 2035.174937 GFLOPS.
+Average elasped time: 0.014410 second, performance: 3099.339131 GFLOPS.
+Average elasped time: 0.051308 second, performance: 870.445731 GFLOPS.
+Average elasped time: 0.017563 second, performance: 2542.969000 GFLOPS.
+Average elasped time: 0.027311 second, performance: 1635.273283 GFLOPS.
+Average elasped time: 0.011688 second, performance: 3821.182144 GFLOPS.
+Average elasped time: 0.004128 second, performance: 10819.967311 GFLOPS.
+result 3200
+Average elasped time: 0.003811 second, performance: 17195.980340 GFLOPS.
+Average elasped time: 0.032799 second, performance: 1998.114265 GFLOPS.
+Average elasped time: 0.021170 second, performance: 3095.675645 GFLOPS.
+Average elasped time: 0.079480 second, performance: 824.563736 GFLOPS.
+Average elasped time: 0.025808 second, performance: 2539.400426 GFLOPS.
+Average elasped time: 0.040089 second, performance: 1634.754905 GFLOPS.
+Average elasped time: 0.017106 second, performance: 3831.119381 GFLOPS.
+Average elasped time: 0.005936 second, performance: 11039.812338 GFLOPS.
+result 3584
+Average elasped time: 0.005254 second, performance: 17525.658727 GFLOPS.
+Average elasped time: 0.045981 second, performance: 2002.400535 GFLOPS.
+Average elasped time: 0.029511 second, performance: 3119.960720 GFLOPS.
+Average elasped time: 0.120352 second, performance: 765.034177 GFLOPS.
+Average elasped time: 0.035934 second, performance: 2562.312496 GFLOPS.
+Average elasped time: 0.056298 second, performance: 1635.452745 GFLOPS.
+Average elasped time: 0.023768 second, performance: 3873.893447 GFLOPS.
+Average elasped time: 0.008295 second, performance: 11099.843334 GFLOPS.
+result 3968
+Average elasped time: 0.006901 second, performance: 18106.858422 GFLOPS.
+Average elasped time: 0.062942 second, performance: 1985.194303 GFLOPS.
+Average elasped time: 0.039848 second, performance: 3135.733470 GFLOPS.
+Average elasped time: 0.164807 second, performance: 758.176378 GFLOPS.
+Average elasped time: 0.048856 second, performance: 2557.574729 GFLOPS.
+Average elasped time: 0.076195 second, performance: 1639.908273 GFLOPS.
+Average elasped time: 0.032265 second, performance: 3872.669256 GFLOPS.
+Average elasped time: 0.011325 second, performance: 11033.504619 GFLOPS.
+result 4096
+Average elasped time: 0.007470 second, performance: 18398.339881 GFLOPS.
+Average elasped time: 0.068265 second, performance: 2013.322369 GFLOPS.
+Average elasped time: 0.043585 second, performance: 3153.389631 GFLOPS.
+Average elasped time: 0.181947 second, performance: 755.380820 GFLOPS.
+Average elasped time: 0.053669 second, performance: 2560.884293 GFLOPS.
+Average elasped time: 0.083608 second, performance: 1643.850106 GFLOPS.
+Average elasped time: 0.035563 second, performance: 3864.638296 GFLOPS.
+Average elasped time: 0.012374 second, performance: 11106.785134 GFLOPS.
