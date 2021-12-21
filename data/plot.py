@@ -20,7 +20,7 @@ def main():
             elif line[0] == "A":
                 t.append(float(line.strip().split(" ")[6]))
     res.append(t)
-    fig = plt.figure(dpi=200,figsize=[8,6])
+    fig = plt.figure(dpi=200,figsize=[10,6])
     for j in range(len(res[0])):
         plt.plot(mat_size,[res[i][j] for i in range(len(res))],marker='o')
     plt.legend(lengend, fontsize = 6)
